@@ -1,0 +1,26 @@
+{
+  "name": "packagejson",
+  "version": "1.0.1",
+  "description": "Require the package.json nearest to cwd",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jameswomack/packagejson.git"
+  },
+  "main": "index.js",
+  "scripts": {
+    "rme": "readme package.json > README.md",
+    "test": "mocha --harmony --inline-diffs"
+  },
+  "author": "james@womack.io",
+  "license": "ISC",
+  "devDependencies": {
+    "is-object": "1.0.1",
+    "mocha": "2.4.5",
+    "package-json-to-readme": "1.5.1"
+  },
+  "dependencies": {
+    "amp-is-undefined": "1.0.1",
+    "is-function": "1.0.1",
+    "string-is-empty": "1.0.0"
+  }
+}
