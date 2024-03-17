@@ -217,3 +217,124 @@
         color: black;
   
     }
+
+    /* text veranderen animation*/
+
+    .text-animation span {
+        position: relative;
+        font-size: 34px;
+        font-weight: 600;
+        border-right: 3px solid var(--main-color); 
+        white-space: nowrap;
+        overflow: hidden;
+      }
+      
+      @keyframes cursor {
+        50% {
+          border-color: transparent;
+        }
+      }
+      
+      /* Behoud de typing animatie als je wilt dat de tekst lijkt te worden getypt */
+      .text-animation span::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+        background-color: var(--bg-color);
+        animation: typing 4s steps(30) 1s infinite;
+      }
+
+      @keyframes typing {
+        from { width: 0; }
+        to { width: 100%; }
+      }
+      
+
+      /*werkt ni 100% ;/ */
+    
+    /* 
+    .text-animation{
+        font-size: 34px;
+        font-weight: 600;
+        min-width: 280px;
+    }
+
+    .text-animation span{
+        position: relative;
+ 
+    }
+
+    .text-animation span::before{
+     content: "Computer Sciences";
+     color: var(--main-color);
+     animation: words 20s infinite;
+     
+    }
+
+    .text-animation span::after{
+        content: "Computer Sciences";
+        background-color: var(--bg-color);
+        position: absolute;
+        width: calc(100% + 3px);
+        height: 100%;
+        border-left: 3px solid var(--bg-color);
+        right: -8px;
+        animation: cursor 0.6s infinite, typing 20s steps(14) infinite;
+
+    }
+
+    @keyframes cursor{
+
+        to{
+            border-left: 2px solid var(--main-color);
+        }
+    }
+    @keyframes words{
+        0%,
+        20%{
+            content: "Full Stack Developer";
+        }
+        21%, 40%{
+            content: "Ethical Hacker";
+        }
+        41%, 60%{
+            content: "Cybersecurity";
+        }
+        61%, 80%{
+            content: "Computer Science";
+        }
+        81%, 100%{
+            content: "Network Engineer";
+        }
+
+    }
+    @keyframes typing{
+      10%,
+      15%,
+      30%,
+      35%,
+      50%,
+      55%,
+      70%,
+      75%,
+      90%,
+      95%{
+        width: 0;
+      }
+      5%,
+      20%,
+      25%,
+      40%,
+      45%,
+      60%,
+      80%,
+      85%{
+        width: calc(100% + 8px);
+      }
+
+    } */
+
+    
