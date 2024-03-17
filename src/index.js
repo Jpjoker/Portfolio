@@ -1,8 +1,7 @@
 'use strict';
 
-import './styles/main.css';
 alert('Dit is een alert!');
-
+console.log('Welkom bij Webpack!');
 
 
 
