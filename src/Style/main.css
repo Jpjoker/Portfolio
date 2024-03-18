@@ -12,9 +12,12 @@
 
     :root   {
         --bg-color: #080808;
-        --second-bg-color: #1b0000;
+        --second-bg-color: #220325;
         --text-color: white;
-        --main-color: #f60b0b;
+        --main-color: #a910be;
+
+          /* --second-bg-color: #1b0000; */
+        /* --main-color: #f60b0b; */
 
     }
 
@@ -342,6 +345,8 @@
 
     } 
 
+    /*about*/
+
     .about{
 
         display: flex;
@@ -498,63 +503,61 @@
   }
   
 
-   /* .service h2{
+   /*projects*/
 
-    margin-bottom: 5rem;
-    color: var(--text-color);
-   }
-
-   .service-container{
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    align-items: center;
-    gap: 2.5rem;
-
-   }
-
-   .service-box{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: var(--main-color);
-    height: 600px;
-    border-radius: 3rem;
-    border: 5px solid transparent;
-    cursor: pointer;
-    transition: 0.4 ease-in-out;
-
-   }
-
-   .service-box:hover{
-    background: 5px solid var(--second-bg-color);
-    color: var(--main-color);
-    border: 5px solid var(--main-color);
-    transform: scale(1.05);
-   }
    
-   .service-box .service-info{
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    justify-content: center;
-    align-items: center;
-    padding: 5rem 5rem;
 
-   }
+   .projects{
+    background: url(/src/images/background2.jpg) center no-repeat;
+    background-size: cover;
 
-   .service-info h4{
-    font-size: 4rem;
-    margin: 2rem 0;
-    font-weight: 800;
+}
 
+    .project-box{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        place-items: center;
+        margin: 5rem 0;
+        gap: 3rem;
+        row-gap: 5rem;
+    }
 
-   }
+    .project-card{
+        height: 600px;
+        max-width: 450px;
+        background-color: black;
+        backdrop-filter: blur(30px);
+        border: 2px solid var(--main-color);
+        border-radius: 5rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        gap: 2rem;
+        padding: 5rem 2rem;
+        overflow: hidden;
+        cursor: pointer;
+        box-shadow: 0 0 5px var(--main-color);
+        transition: 0.4s ease;
+    }
+   
+    .project-card:hover{
+        box-shadow: 0 0 25px var(--main-color),
+                    0 0 50px var(--main-color);
+        transform: scale(1.02) ;
+    }
 
-   .service-info p{
-    font-size: 1.4rem;
-    font-weight: 600;
-    line-height: 1.7;
-    margin-bottom: 2rem;
-   } */
+    .project-card img{
+        max-width: 18vw;
+        object-fit: cover;
+    }
 
+    .project-card h3{
+        font-size: 3rem;
+    }
+
+    .project-card p{
+        font-size: 1.6rem;
+       
+    }
