@@ -61,6 +61,7 @@
     }
 
     /*navbar*/
+   
     .navbar a{
         color: var(--text-color);
         font-size: 1.8rem;
@@ -310,10 +311,10 @@
             content: "Ethical Hacker";
         }
         41%, 60%{
-            content: "CyberSecurity";
+            content: "Cyber Security analyst";
         }
         61%, 80%{
-            content: "Computer Science";
+            content: "Computer Scientist";
         }
         81%, 100%{
             content: "Network Engineer";

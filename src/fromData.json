@@ -1,0 +1,22 @@
+{
+    "messages": [
+      {
+        "id": 1,
+        "fullName": "Alice Johnson",
+        "email": "alice@example.com",
+        "phoneNumber": "123-456-7890",
+        "subject": "Inquiry",
+        "message": "I have a question about your services."
+      },
+      {
+        "id": 2,
+        "fullName": "Bob Smith",
+        "email": "bob@example.com",
+        "phoneNumber": "098-765-4321",
+        "subject": "Feedback",
+        "message": "Great job on the project!"
+      }
+      
+    ]
+  }
+  
