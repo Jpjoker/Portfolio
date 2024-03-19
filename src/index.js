@@ -97,12 +97,11 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
-/*het project  GOOD*/
+/*het project kunt ge altijd uw data-url oproepen  GOOD*/
 document.addEventListener("DOMContentLoaded", function () {
   // Select all buttons with class 'btn' that are intended for viewing projects
   const seeProjectBtns = document.querySelectorAll(".btn.see-project-btn");
 
-  // Add click event listener to each button
   seeProjectBtns.forEach((btn) => {
     btn.addEventListener("click", function () {
       // Redirect to the URL specified in the data-url attribute of the clicked button
@@ -111,25 +110,64 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
-// Desturcturing TODO
-// Assuming formData is defined as before in your form submission logic
-const { fullName, email, phoneNumber, subject, message } = formData;
-console.log(fullName, email, phoneNumber, subject, message);
+// play aka muziek GOOD
+document.addEventListener("DOMContentLoaded", function () {
+  const tracks = [
+    { id: 1, path: "audio/muziek.mp3", name: "Track 1" },
+    { id: 2, path: "audio/muziek2.mp3", name: "Track 2" },
+    { id: 3, path: "audio/muziek3.mp3", name: "Track 3" },
+    { id: 4, path: "audio/muziek4.mp3", name: "Track 4" },
+  ];
 
-// Spread & Rest Operator todo
-const additionalInfo = { submissionDate: new Date().toISOString() };
-const fullFormData = { ...formData, ...additionalInfo };
-console.log(fullFormData);
+  let currentTrackIndex = 0;
+  let isPlaying = false;
+  let audio = new Audio();
 
-// Iteration Over an Array TODO
-// Assuming you have a data-name attribute on each project card
-const projectCards = document.querySelectorAll(".project-card");
+  function togglePlayStop() {
+    if (!isPlaying) {
+      playMusic().then(() => {
+        document.getElementById("playStopButton").textContent = "Pause";
+      });
+    } else {
+      audio.pause();
+      isPlaying = false;
+      document.getElementById("playStopButton").textContent = "Play";
+    }
+  }
 
-projectCards.forEach((card) => {
-  const projectName = card.getAttribute("data-name"); // Assuming this attribute exists
-  console.log(`Project Name: ${projectName}`);
+  function playMusic() {
+    return new Promise((resolve, reject) => {
+      if (audio.src !== tracks[currentTrackIndex].path) {
+        audio.src = tracks[currentTrackIndex].path;
+      }
+      audio.play();
+      isPlaying = true;
+      resolve("Muziek speelt.");
+      audio.onended = function () {
+        isPlaying = false;
+        document.getElementById("playStopButton").textContent = "Play";
+      };
+      audio.onerror = () => reject("Fout bij het laden van de muziek.");
+    });
+  }
+
+  function nextTrack() {
+    currentTrackIndex = (currentTrackIndex + 1) % tracks.length;
+    if (isPlaying) {
+      playMusic();
+    }
+  }
+
+  function prevTrack() {
+    currentTrackIndex = (currentTrackIndex - 1 + tracks.length) % tracks.length;
+    if (isPlaying) {
+      playMusic();
+    }
+  }
+
+  document
+    .getElementById("playStopButton")
+    .addEventListener("click", togglePlayStop);
+  document.getElementById("nextButton").addEventListener("click", nextTrack);
+  document.getElementById("prevButton").addEventListener("click", prevTrack);
 });
-
-// Callback function TODO
-
-// Promise TODO

@@ -88,11 +88,11 @@
         display: none;
 
     }
-
-    .active{
+    /* anders werkt mijn menu niet + TODO*/
+    /* .active{
         display: block !important;
         
-    }
+    } */
 
 
 
@@ -456,7 +456,7 @@
 
     }
 
-    /*coplite  de scrollbar rechts is nu rood <3*/
+    /*hulp van coplite  de scrollbar rechts is nu purple <3*/
     ::-webkit-scrollbar {
         width: 15px;
 
@@ -505,12 +505,12 @@
         border: 5px solid transparent;
         cursor: pointer;
         transition: background-color 0.4s ease-in-out, transform 0.4s ease-in-out, border 0.4s ease-in-out;
-        /* Verbeterde transitie */
+
     }
 
     .service-box:hover {
         background-color: var(--second-bg-color);
-        /* Aangepast naar correcte eigenschap */
+        /* Aangepast naar correcte eigenschap  || dit hier copilot*/
         color: var(--main-color);
         border: 5px solid var(--main-color);
         transform: scale(1.05);
@@ -541,8 +541,6 @@
 
 
     /*projects*/
-
-
 
     .projects {
         background: url(/src/images/background2.jpg) center no-repeat;
@@ -729,6 +727,7 @@
         color: var(--text-color);
     }
 
+    /*Telefoon + tablet*/
 
     @media (max-width:1285px) {
         html {
@@ -773,6 +772,10 @@
     @media(max-width: 895px) {
         #menu-icon {
             display: block;
+        }
+        .active{
+            display: block !important;
+            
         }
 
         .navbar {
