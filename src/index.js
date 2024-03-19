@@ -36,10 +36,10 @@ form.addEventListener("submit", async (e) => {
   localStorage.setItem("contactFormData", JSON.stringify(formData));
   console.log("Form data saved to LocalStorage");
 
-  // Fetch om data optehalen  (Async & Await) TODO
+  // Fetch om data optehalen (Async & Await) script google erin zetten GOOD
   try {
     const response = await fetch(
-      "https://script.google.com/macros/s/YOUR_SCRIPT_ID/exec",
+      "https://script.google.com/macros/s/jouw-id/exec",
       {
         method: "POST",
         mode: "no-cors", // This is important for CORS policy
@@ -50,7 +50,7 @@ form.addEventListener("submit", async (e) => {
       }
     );
 
-    // gebruik hier een callback function TODO
+    // gebruik hier een callback function toevoegen TODO
     if (!response.ok) throw new Error("Network response was not ok.");
     console.log("Form submitted successfully");
     alert("Thank you for your message!");
