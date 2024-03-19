@@ -117,6 +117,7 @@ document.addEventListener("DOMContentLoaded", function () {
     { id: 2, path: "audio/muziek2.mp3", name: "Track 2" },
     { id: 3, path: "audio/muziek3.mp3", name: "Track 3" },
     { id: 4, path: "audio/muziek4.mp3", name: "Track 4" },
+    { id: 5, path: "audio/muziek5.mp3", name: "Track 5" },
   ];
 
   let currentTrackIndex = 0;
