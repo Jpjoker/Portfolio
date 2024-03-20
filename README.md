@@ -27,6 +27,9 @@ or
 
 https://www.google.com/script/start/
 
+Css style extra
+https://developer.mozilla.org/en-US/docs/Web/CSS/@keyframes
+
 chatgpt and copilot
 
 ```

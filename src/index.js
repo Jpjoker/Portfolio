@@ -172,3 +172,5 @@ document.addEventListener("DOMContentLoaded", function () {
   document.getElementById("nextButton").addEventListener("click", nextTrack);
   document.getElementById("prevButton").addEventListener("click", prevTrack);
 });
+
+// dark en light methode
