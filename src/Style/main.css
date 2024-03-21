@@ -15,10 +15,6 @@
         --second-bg-color: #220325;
         --text-color: white;
         --main-color: #a910be;
-
-        /* --second-bg-color: #1b0000; */
-        /* --main-color: #f60b0b; */
-
     }
 
     html {
@@ -276,10 +272,6 @@
             width: 100%;
         }
     }
-
-
-    /*werkt ni 100% ;/ */
-
 
     .text-animation {
         font-size: 34px;
