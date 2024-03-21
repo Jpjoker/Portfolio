@@ -64,18 +64,24 @@
     <section class="about" id="about">
         <div class="about-img">
             <img src="images/profiles-fotos.jpg" alt="">
-
         </div>
-
+    
         <div class="about-content">
             <h2 class="heading">About <span>Me</span></h2>
             <h3 class="text-animation"><span></span></h3>
-            <p>
-                Diving into a world where technology meets creativity, my portfolio is a testament to a journey fueled by laughter, collaboration, and an undying passion for computer science and entrepreneurship. Each project reflects a commitment to innovation and the power of working together. Explore, engage, and let's transform ambitious visions into tangible realities.
-             </p> <a href="#" class="btn"> Read More </a>
+            <p id="aboutText">
+                Diving into a world where technology meets creativity, my portfolio is a testament to a journey fueled by laughter, collaboration, and an undying passion for computer science and entrepreneurship.
+                <span id="moreText" style="display: none;">
+                    Each project reflects a commitment to innovation and the power of working together. Explore, engage, and let's transform ambitious visions into tangible realities.
+                </span>
+            </p>
+            <a href="javascript:void(0);" onclick="readMore()" class="btn">Read More</a>
         </div>
-
     </section>
+    
+
+
+    
 
     <!--services-->
     <section class="services" id="services">

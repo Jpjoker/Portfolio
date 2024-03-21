@@ -174,3 +174,18 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 // dark en light methode
+
+// readmore
+
+function readMore() {
+  let moreText = document.getElementById("moreText");
+  let btnText = document.querySelector(".about .btn");
+
+  if (moreText.style.display === "none") {
+    moreText.style.display = "inline";
+    btnText.textContent = "Read Less"; // Verandert de tekst van de knop
+  } else {
+    moreText.style.display = "none";
+    btnText.textContent = "Read More"; // Zet de tekst terug naar "Read More"
+  }
+}
