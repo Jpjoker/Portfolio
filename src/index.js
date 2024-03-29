@@ -173,8 +173,6 @@ document.addEventListener("DOMContentLoaded", function () {
   document.getElementById("prevButton").addEventListener("click", prevTrack);
 });
 
-// dark en light methode
-
 // readmore
 
 function readMore() {
@@ -189,3 +187,28 @@ function readMore() {
     btnText.textContent = "Read More"; // Zet de tekst terug naar "Read More"
   }
 }
+
+// dark en light methode GOOD
+document.addEventListener("DOMContentLoaded", () => {
+  const modeToggle = document.getElementById("modeToggle");
+
+  modeToggle.addEventListener("click", () => {
+    document.body.classList.toggle("light-mode");
+
+    if (document.body.classList.contains("light-mode")) {
+      modeToggle.textContent = "Dark Mode"; // Tekst voor als Light Mode actief is
+      localStorage.setItem("theme", "light");
+    } else {
+      modeToggle.textContent = "Light Mode"; // Tekst voor als Dark Mode actief is
+      localStorage.setItem("theme", "dark");
+    }
+  });
+
+  // Voorkeur thema ophalen en instellen bij laden pagina
+  const savedTheme = localStorage.getItem("theme");
+  if (savedTheme) {
+    document.body.classList.add(savedTheme === "light" ? "light-mode" : "");
+    modeToggle.textContent =
+      savedTheme === "light" ? "Dark Mode" : "Light Mode";
+  }
+});

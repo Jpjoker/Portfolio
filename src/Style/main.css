@@ -11,10 +11,25 @@
     }
 
     :root {
+         /*dark mode */
         --bg-color: #080808;
         --second-bg-color: #220325;
         --text-color: white;
         --main-color: #a910be;
+
+        /*light  mode*/
+        --bg-color-light: #ffffff;
+        --second-bg-color-light: #d074d8;
+        --text-color-light: rgb(221, 30, 157);
+        --main-color-light:  #a910be;
+    }
+
+    /* om light mode te activeren voor color veranderen*/
+    .light-mode {
+        --bg-color: var(--bg-color-light);
+        --second-bg-color: var(--second-bg-color-light);
+        --text-color: var(--text-color-light);
+        --main-color: var(--main-color-light);
     }
 
     html {
